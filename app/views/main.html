@@ -1,23 +1,84 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
+<!--summary controls-->
+<div class="row">
+    <div class="col-md-1">
+        <a data-target="#SummaryModal" data-toggle="modal" ng-click="eddShowModal=false">
+            <img src="../images/Symmary.png" />
+        </a>
+        <p>Summary.doc</p>
+        <!-- Modal -->
+        <div class="modal fade" id="SummaryModal" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div>
+                    <!--Modal Header-->
+                    <div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <img src="../images/document%20head.png" />
+                    </div>
+                    <!--Modal Body-->
+                    <div class="summaryModal">
+                        <p>Objective</p>
+                        <p>Driven Professional with broad technical skilled set and experience 3D Artist with nearly 10 years of experience using 3D Applications. Obsessed with creative chalanges beckoning 3D solutions</p>
+                        <p>Proficient in 3D Modeling, Texturing, Lighting and Rendering</p>
+                        <p>Proficient in Motion Graphics, Animation and Webdesign</p>
+                    </div><!--End Modal Body-->
+                    <!--Modal Footer-->
+                    <div>
+                        <img src="../images/documentfooter.png" />
+                        <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    </div><!--End Modal Footer-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--Experience controls-->
+<div class="row">
+    <div class="col-md-1">
+        <a ng-click="expShowModal=true">
+            <img src="../images/Experience.png" />
+        </a>
+        <p>Experience</p>
+    </div>
 </div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<!--Education-->
+<div class="row">
+    <div class="col-md-1">
+        <a ng-click="eddShowModal=true">
+            <img src="../images/Experience.png" />
+        </a>
+        <p>Educations</p>
+    </div>
 </div>
+
+<!--Skills-->
+<div class="row">
+    <div class="col-md-1">
+        <a ng-click="skillShowModal=true">
+            <img src="../images/Experience.png" />
+        </a>
+        <p>Skills</p>
+    </div>
+</div>
+
+<!--Award-->
+<div class="row">
+    <div class="col-md-1">
+        <a ng-click="awardShowModal=true">
+            <img src="../images/Experience.png" />
+        </a>
+        <p>Award</p>
+    </div>
+</div>
+
+<ng-include src="'experiencemodal.html'" ng-show="expShowModal"></ng-include>
+<ng-include src="'educationmodal.html'" ng-show="eddShowModal"></ng-include>
+<ng-include src="'skillmodal.html'" ng-show="skillShowModal"></ng-include>
+<ng-include src="'awardmodal.html'" ng-show="awardShowModal"></ng-include>
+
+
+
